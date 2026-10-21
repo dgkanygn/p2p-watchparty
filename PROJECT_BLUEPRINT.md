@@ -41,6 +41,16 @@ npm install
 npm run dev
 ```
 
+### Backend with Docker
+```bash
+# Docker Compose (kök dizinden)
+docker compose up -d
+
+# veya doğrudan Docker build & run (api dizininden)
+docker build -t watchvideo-api ./api
+docker run -p 4000:4000 watchvideo-api
+```
+
 ### Frontend (`client`)
 ```bash
 cd client
