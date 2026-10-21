@@ -8,9 +8,10 @@ let socketInstance: Socket | null = null;
 
 export const getSocket = (): Socket => {
   if (!socketInstance) {
-    const serverUrl =
+    const rawUrl =
       import.meta.env.VITE_API_URL ||
       `http://${window.location.hostname}:4000`;
+    const serverUrl = rawUrl.replace(/\/+$/, '');
 
     socketInstance = io(serverUrl, {
       autoConnect: true,

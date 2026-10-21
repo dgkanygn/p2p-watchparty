@@ -76,8 +76,9 @@ export const RoomPage: React.FC<RoomPageProps> = ({ socket }) => {
     }
 
     let isMounted = true;
-    const apiUrl =
+    const rawUrl =
       import.meta.env.VITE_API_URL || `http://${window.location.hostname}:4000`;
+    const apiUrl = rawUrl.replace(/\/+$/, '');
 
     fetch(`${apiUrl}/api/room/${roomId}`)
       .then(async (res) => {
