@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-app-bg: var(--bg-primary);
+  --color-app-surface: var(--bg-secondary);
+  --color-app-hover: var(--bg-tertiary);
+  --color-app-border: var(--border-muted);
+  --color-app-border-focus: var(--border-focus);
+  --color-app-text: var(--text-primary);
+  --color-app-muted: var(--text-secondary);
+  --color-app-dim: var(--text-muted);
+  --color-app-accent: var(--accent-base);
+  --color-app-accent-hover: var(--accent-hover);
+  --color-app-accent-faint: var(--accent-faint);
+  --color-app-danger: var(--status-danger);
+  --color-app-danger-bg: var(--status-danger-bg);
+  --color-app-warning: var(--status-warning);
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
+
+:root {
+  --bg-primary: #090b09;       /* Deep matte black with faint forest undertone */
+  --bg-secondary: #111411;     /* Surface panels, sidebar, inputs */
+  --bg-tertiary: #171c17;      /* Hover states, item backgrounds */
+  
+  --border-muted: #1f271f;     /* Subtle division lines */
+  --border-focus: #2e3d2e;     /* Active borders */
+  
+  --text-primary: #e6ede6;     /* Clean off-white */
+  --text-secondary: #8c9c8c;   /* Neutral secondary labels */
+  --text-muted: #525e52;       /* Subdued status text */
+  
+  --accent-base: #22c55e;      /* Terminal green */
+  --accent-hover: #16a34a;
+  --accent-faint: rgba(34, 197, 94, 0.08);
+  
+  --status-danger: #e11d48;
+  --status-danger-bg: rgba(225, 29, 72, 0.1);
+  --status-warning: #eab308;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars matching the dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-muted);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-focus);
+}
